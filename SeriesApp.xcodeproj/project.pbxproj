@@ -14,6 +14,19 @@
 		92022E9E2AA628B600FAB2CA /* SeriesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92022E9D2AA628B600FAB2CA /* SeriesAppTests.swift */; };
 		92022EA82AA628B600FAB2CA /* SeriesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92022EA72AA628B600FAB2CA /* SeriesAppUITests.swift */; };
 		92022EAA2AA628B600FAB2CA /* SeriesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92022EA92AA628B600FAB2CA /* SeriesAppUITestsLaunchTests.swift */; };
+		92022EB92AA65C6200FAB2CA /* PListAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92022EB82AA65C6200FAB2CA /* PListAppConfiguration.swift */; };
+		92022EBB2AA65CD100FAB2CA /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92022EBA2AA65CD100FAB2CA /* Configuration.plist */; };
+		92022EC42AA672F300FAB2CA /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92022EC32AA672F300FAB2CA /* TVShow.swift */; };
+		92022EC82AA6746E00FAB2CA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92022EC72AA6746E00FAB2CA /* HomeView.swift */; };
+		92022ECA2AA6747D00FAB2CA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92022EC92AA6747D00FAB2CA /* HomeViewModel.swift */; };
+		927712AF2AA7C02600E609CB /* TVShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712AE2AA7C02600E609CB /* TVShowService.swift */; };
+		927712B32AA7C20400E609CB /* MockTVShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712B22AA7C20400E609CB /* MockTVShowService.swift */; };
+		927712B82AA7D9AE00E609CB /* TMDBTVShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712B72AA7D9AE00E609CB /* TMDBTVShowService.swift */; };
+		927712BB2AA7E6E700E609CB /* SubscribedShowsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712BA2AA7E6E700E609CB /* SubscribedShowsService.swift */; };
+		927712BD2AA7E79400E609CB /* MockSubscribedShowsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712BC2AA7E79400E609CB /* MockSubscribedShowsService.swift */; };
+		927712C12AA9232E00E609CB /* TVShowDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712C02AA9232E00E609CB /* TVShowDetailView.swift */; };
+		9281B3342AA9983F0088FDE7 /* TVShowDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281B3332AA9983F0088FDE7 /* TVShowDetailViewModel.swift */; };
+		9281B3362AA99CFB0088FDE7 /* DiskSubscribedShowsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9281B3352AA99CFB0088FDE7 /* DiskSubscribedShowsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +57,19 @@
 		92022EA32AA628B600FAB2CA /* SeriesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeriesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92022EA72AA628B600FAB2CA /* SeriesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesAppUITests.swift; sourceTree = "<group>"; };
 		92022EA92AA628B600FAB2CA /* SeriesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		92022EB82AA65C6200FAB2CA /* PListAppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListAppConfiguration.swift; sourceTree = "<group>"; };
+		92022EBA2AA65CD100FAB2CA /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		92022EC32AA672F300FAB2CA /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
+		92022EC72AA6746E00FAB2CA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		92022EC92AA6747D00FAB2CA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		927712AE2AA7C02600E609CB /* TVShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowService.swift; sourceTree = "<group>"; };
+		927712B22AA7C20400E609CB /* MockTVShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTVShowService.swift; sourceTree = "<group>"; };
+		927712B72AA7D9AE00E609CB /* TMDBTVShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTVShowService.swift; sourceTree = "<group>"; };
+		927712BA2AA7E6E700E609CB /* SubscribedShowsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribedShowsService.swift; sourceTree = "<group>"; };
+		927712BC2AA7E79400E609CB /* MockSubscribedShowsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSubscribedShowsService.swift; sourceTree = "<group>"; };
+		927712C02AA9232E00E609CB /* TVShowDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailView.swift; sourceTree = "<group>"; };
+		9281B3332AA9983F0088FDE7 /* TVShowDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailViewModel.swift; sourceTree = "<group>"; };
+		9281B3352AA99CFB0088FDE7 /* DiskSubscribedShowsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskSubscribedShowsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +120,11 @@
 		92022E8B2AA628B500FAB2CA /* SeriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				927712BE2AA9230E00E609CB /* DetailModule */,
+				92022EC22AA672E800FAB2CA /* Model */,
+				92022EBE2AA671C600FAB2CA /* Service */,
+				92022EB72AA65B9100FAB2CA /* Config */,
+				92022EB62AA65B7D00FAB2CA /* HomeModule */,
 				92022E8C2AA628B500FAB2CA /* SeriesAppApp.swift */,
 				92022E8E2AA628B500FAB2CA /* ContentView.swift */,
 				92022E902AA628B600FAB2CA /* Assets.xcassets */,
@@ -125,6 +156,102 @@
 				92022EA92AA628B600FAB2CA /* SeriesAppUITestsLaunchTests.swift */,
 			);
 			path = SeriesAppUITests;
+			sourceTree = "<group>";
+		};
+		92022EB62AA65B7D00FAB2CA /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				92022EBD2AA65ED600FAB2CA /* ViewModel */,
+				92022EBC2AA65ECF00FAB2CA /* View */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		92022EB72AA65B9100FAB2CA /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				92022EB82AA65C6200FAB2CA /* PListAppConfiguration.swift */,
+				92022EBA2AA65CD100FAB2CA /* Configuration.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		92022EBC2AA65ECF00FAB2CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92022EC72AA6746E00FAB2CA /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92022EBD2AA65ED600FAB2CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				92022EC92AA6747D00FAB2CA /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		92022EBE2AA671C600FAB2CA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				927712B92AA7E4BA00E609CB /* SubscribedShowsService */,
+				927712AD2AA7C01700E609CB /* TVShowService */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		92022EC22AA672E800FAB2CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92022EC32AA672F300FAB2CA /* TVShow.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		927712AD2AA7C01700E609CB /* TVShowService */ = {
+			isa = PBXGroup;
+			children = (
+				927712AE2AA7C02600E609CB /* TVShowService.swift */,
+				927712B22AA7C20400E609CB /* MockTVShowService.swift */,
+				927712B72AA7D9AE00E609CB /* TMDBTVShowService.swift */,
+			);
+			path = TVShowService;
+			sourceTree = "<group>";
+		};
+		927712B92AA7E4BA00E609CB /* SubscribedShowsService */ = {
+			isa = PBXGroup;
+			children = (
+				927712BA2AA7E6E700E609CB /* SubscribedShowsService.swift */,
+				927712BC2AA7E79400E609CB /* MockSubscribedShowsService.swift */,
+				9281B3352AA99CFB0088FDE7 /* DiskSubscribedShowsService.swift */,
+			);
+			path = SubscribedShowsService;
+			sourceTree = "<group>";
+		};
+		927712BE2AA9230E00E609CB /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				9281B3322AA9982E0088FDE7 /* ViewModel */,
+				927712BF2AA9231800E609CB /* View */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		927712BF2AA9231800E609CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				927712C02AA9232E00E609CB /* TVShowDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9281B3322AA9982E0088FDE7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9281B3332AA9983F0088FDE7 /* TVShowDetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92022EBB2AA65CD100FAB2CA /* Configuration.plist in Resources */,
 				92022E942AA628B600FAB2CA /* Preview Assets.xcassets in Resources */,
 				92022E912AA628B600FAB2CA /* Assets.xcassets in Resources */,
 			);
@@ -257,8 +385,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				927712B32AA7C20400E609CB /* MockTVShowService.swift in Sources */,
+				92022EB92AA65C6200FAB2CA /* PListAppConfiguration.swift in Sources */,
+				927712BB2AA7E6E700E609CB /* SubscribedShowsService.swift in Sources */,
 				92022E8F2AA628B500FAB2CA /* ContentView.swift in Sources */,
+				927712AF2AA7C02600E609CB /* TVShowService.swift in Sources */,
+				927712BD2AA7E79400E609CB /* MockSubscribedShowsService.swift in Sources */,
+				927712C12AA9232E00E609CB /* TVShowDetailView.swift in Sources */,
+				92022ECA2AA6747D00FAB2CA /* HomeViewModel.swift in Sources */,
+				9281B3362AA99CFB0088FDE7 /* DiskSubscribedShowsService.swift in Sources */,
+				92022EC82AA6746E00FAB2CA /* HomeView.swift in Sources */,
+				9281B3342AA9983F0088FDE7 /* TVShowDetailViewModel.swift in Sources */,
+				92022EC42AA672F300FAB2CA /* TVShow.swift in Sources */,
 				92022E8D2AA628B500FAB2CA /* SeriesAppApp.swift in Sources */,
+				927712B82AA7D9AE00E609CB /* TMDBTVShowService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,15 @@ import SwiftUI
 struct SeriesAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            
+            let tvService = TMDBTVShowService(apiKey: "016f3689a332c33061fd8fb762b6734c")
+            let subscriptionsService = DiskSubscribedShowsService()
+            let viewModel = HomeViewModel(tvShowService: tvService, subscribedShowService: subscriptionsService)
+            
+            HomeView(viewModel: viewModel)
+            
+            
         }
     }
 }
