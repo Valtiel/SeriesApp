@@ -10,6 +10,7 @@ import SwiftUI
 struct TVShowDetailView: View {
     
     @ObservedObject var viewModel: TVShowDetailViewModel
+    @State var tvShow: TVShow
     @State var imageHeight: CGFloat = 273
     @State var imageWidth: CGFloat = 182
     
@@ -21,10 +22,8 @@ struct TVShowDetailView: View {
     var body: some View {
         
         VStack {
-            
-            let tvShow = viewModel.tvShow
-            
-            AsyncImage(url: URL(string: viewModel.getFormattedPosterUrl(width: 500)))
+                        
+            AsyncImage(url: URL(string: viewModel.getFormattedPosterUrl(tvShow: tvShow, width: 500)))
             { phase in
                 switch phase {
                 case .empty:
@@ -80,7 +79,7 @@ struct TVShowDetailView: View {
                 
             }
         }
-        .background(AsyncImage(url: URL(string: viewModel.getFormattedBackdropUrl(width: 500)))
+        .background(AsyncImage(url: URL(string: viewModel.getFormattedBackdropUrl(tvShow: tvShow, width: 500)))
                     { phase in
             switch phase {
             case .empty:
@@ -118,8 +117,8 @@ extension TVShowDetailView {
 
 struct TVShowDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let mockViewModel = TVShowDetailViewModel(tvShow: TVShow.mock(), tvShowService: MockTVShowService(), subscribedShowService: MockSubscribedShowService())
-        TVShowDetailView(viewModel: mockViewModel)
+        let mockViewModel = TVShowDetailViewModel(tvShowService: MockTVShowService(), subscribedShowService: MockSubscribedShowService())
+        TVShowDetailView(viewModel: mockViewModel, tvShow: TVShow.mock())
     }
 }
 

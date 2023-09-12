@@ -15,10 +15,8 @@ struct SeriesAppApp: App {
             
             let tvService = TMDBTVShowService(apiKey: "016f3689a332c33061fd8fb762b6734c")
             let subscriptionsService = DiskSubscribedShowsService()
-            let viewModel = HomeViewModel(tvShowService: tvService, subscribedShowService: subscriptionsService)
-            
-            HomeView(viewModel: viewModel)
-            
+            let appRouter = AppRouter(tvShowService: tvService, subscribedShowService: subscriptionsService)
+            appRouter.route(destination: .home).environmentObject(appRouter)
             
         }
     }

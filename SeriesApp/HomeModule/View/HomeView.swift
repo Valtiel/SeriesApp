@@ -10,6 +10,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @EnvironmentObject var router: AppRouter
     @ObservedObject var viewModel: HomeViewModel
     @State private var query = ""
     
@@ -24,10 +25,10 @@ struct HomeView: View {
                 await viewModel.refresh()
             }
             .background(Color.black)
-            .navigationDestination(for: TVShow.self) { tvShow in
-                let viewModel = TVShowDetailViewModel(tvShow: tvShow, tvShowService: viewModel.tvShowService, subscribedShowService: viewModel.subscribedShowService)
-                TVShowDetailView(viewModel: viewModel)
-            }.preferredColorScheme(.dark).refreshable {
+            .navigationDestination(for: RouterDestination.self) { destination in
+                router.route(destination: destination)
+            }
+            .preferredColorScheme(.dark).refreshable {
                 await viewModel.refresh()
             }
             .searchable(
@@ -62,7 +63,7 @@ struct TVShowSearchListView: View {
                 LazyVStack {
                     ForEach(viewModel.foundTVShows.indices, id: \.self) { index in
                         let tvShow = viewModel.foundTVShows[index]
-                        NavigationLink(value: tvShow) {
+                        NavigationLink(value: RouterDestination.details(tvShow: tvShow)) {
                             TVShowSearchView(viewModel: viewModel, tvShow: tvShow)
                                 .frame(maxWidth: .infinity, minHeight: 80, maxHeight: 80)
                                 .padding(15)
@@ -172,7 +173,7 @@ struct TVShowsList: View {
                     let tvShow = viewModel.tvShows[index]
                     let url = viewModel.getFormattedBackdropUrl(index: index, width: 500)
                     
-                    NavigationLink(value: tvShow) {
+                    NavigationLink(value: RouterDestination.details(tvShow: tvShow)) {
                         TVShowCard(name: tvShow.name, url: url, tags: [""])
                             .frame(maxWidth: .infinity, minHeight: 156, maxHeight: 156)
                     }.task {
@@ -201,7 +202,8 @@ struct SubscribedCarousel: View {
             ScrollView(.horizontal) {
                 LazyHStack {
                     ForEach(viewModel.subscribedTVShows.indices, id: \.self) { index in
-                        NavigationLink(value: viewModel.subscribedTVShows[index]) {
+                        let tvShow = viewModel.subscribedTVShows[index]
+                        NavigationLink(value: RouterDestination.details(tvShow: tvShow)) {
                             let url = viewModel.getFormattedPosterUrl(index: index, width: 500)
                             SubscribedShowCard(url: url)
                                 .frame(width: 100, height: 150)
@@ -306,7 +308,6 @@ struct HomeView_Previews: PreviewProvider {
         let mockSubscribedService = MockSubscribedShowService()
         let viewModel = HomeViewModel(tvShowService: mockTVService, subscribedShowService: mockSubscribedService)
         HomeView(viewModel: viewModel)
-//        TVShowSearchView(name: "name", genre: "genre", url: "https://picsum.photos/100/150", isSubscribed: true)
     }
 }
 

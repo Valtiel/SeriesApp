@@ -23,7 +23,10 @@ class TMDBTVShowService: TVShowService {
         self.apiKey = apiKey
     }
     
-    func getImageURL(_ path: String, width: Int) -> String {
+    func getImageURL(_ path: String?, width: Int) -> String {
+        guard let path = path else {
+            return "PLACEHOLDER"
+        }
         return "https://image.tmdb.org/t/p/w\(width)\(path)"
     }
     
@@ -48,7 +51,6 @@ class TMDBTVShowService: TVShowService {
         let (data, _) = try await URLSession.shared.data(for: request)
         do {
             let result = try JSONDecoder().decode(TMDBResult.self, from: data)
-            print(data.prettyPrintedJSONString)
             return result.results
         } catch {
             print(error)
@@ -76,7 +78,6 @@ class TMDBTVShowService: TVShowService {
             let result = try JSONDecoder().decode(TMDBResult.self, from: data)
             return result.results
         } catch {
-            print(error)
             return []
         }
         

@@ -11,6 +11,6 @@ protocol TVShowService {
     func fetchTVShows() async throws -> [TVShow]
     func fetchTVShows(page: Int) async throws -> [TVShow]
     func searchTVShows(by query: String, page: Int) async throws -> [TVShow] 
-    func getImageURL(_ path: String, width: Int) -> String
+    func getImageURL(_ path: String?, width: Int) -> String
 }
 

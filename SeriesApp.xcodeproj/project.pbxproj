@@ -19,6 +19,8 @@
 		92022EC42AA672F300FAB2CA /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92022EC32AA672F300FAB2CA /* TVShow.swift */; };
 		92022EC82AA6746E00FAB2CA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92022EC72AA6746E00FAB2CA /* HomeView.swift */; };
 		92022ECA2AA6747D00FAB2CA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92022EC92AA6747D00FAB2CA /* HomeViewModel.swift */; };
+		9203B2A32AAFB9640034FA89 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B2A22AAFB9640034FA89 /* AppRouter.swift */; };
+		9203B2A52AAFBB640034FA89 /* RouterDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B2A42AAFBB640034FA89 /* RouterDestination.swift */; };
 		927712AF2AA7C02600E609CB /* TVShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712AE2AA7C02600E609CB /* TVShowService.swift */; };
 		927712B32AA7C20400E609CB /* MockTVShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712B22AA7C20400E609CB /* MockTVShowService.swift */; };
 		927712B82AA7D9AE00E609CB /* TMDBTVShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712B72AA7D9AE00E609CB /* TMDBTVShowService.swift */; };
@@ -62,6 +64,8 @@
 		92022EC32AA672F300FAB2CA /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
 		92022EC72AA6746E00FAB2CA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		92022EC92AA6747D00FAB2CA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9203B2A22AAFB9640034FA89 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		9203B2A42AAFBB640034FA89 /* RouterDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterDestination.swift; sourceTree = "<group>"; };
 		927712AE2AA7C02600E609CB /* TVShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowService.swift; sourceTree = "<group>"; };
 		927712B22AA7C20400E609CB /* MockTVShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTVShowService.swift; sourceTree = "<group>"; };
 		927712B72AA7D9AE00E609CB /* TMDBTVShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTVShowService.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 		92022E8B2AA628B500FAB2CA /* SeriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				9203B2A12AAFB9500034FA89 /* Routing */,
 				927712BE2AA9230E00E609CB /* DetailModule */,
 				92022EC22AA672E800FAB2CA /* Model */,
 				92022EBE2AA671C600FAB2CA /* Service */,
@@ -207,6 +212,15 @@
 				92022EC32AA672F300FAB2CA /* TVShow.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9203B2A12AAFB9500034FA89 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				9203B2A22AAFB9640034FA89 /* AppRouter.swift */,
+				9203B2A42AAFBB640034FA89 /* RouterDestination.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 		927712AD2AA7C01700E609CB /* TVShowService */ = {
@@ -390,9 +404,11 @@
 				927712BB2AA7E6E700E609CB /* SubscribedShowsService.swift in Sources */,
 				92022E8F2AA628B500FAB2CA /* ContentView.swift in Sources */,
 				927712AF2AA7C02600E609CB /* TVShowService.swift in Sources */,
+				9203B2A52AAFBB640034FA89 /* RouterDestination.swift in Sources */,
 				927712BD2AA7E79400E609CB /* MockSubscribedShowsService.swift in Sources */,
 				927712C12AA9232E00E609CB /* TVShowDetailView.swift in Sources */,
 				92022ECA2AA6747D00FAB2CA /* HomeViewModel.swift in Sources */,
+				9203B2A32AAFB9640034FA89 /* AppRouter.swift in Sources */,
 				9281B3362AA99CFB0088FDE7 /* DiskSubscribedShowsService.swift in Sources */,
 				92022EC82AA6746E00FAB2CA /* HomeView.swift in Sources */,
 				9281B3342AA9983F0088FDE7 /* TVShowDetailViewModel.swift in Sources */,

@@ -9,7 +9,7 @@ import Foundation
 
 class MockTVShowService: TVShowService {
     
-    func getImageURL(_ path: String, width: Int) -> String {
+    func getImageURL(_ path: String?, width: Int) -> String {
         return "https://picsum.photos/\(path)"
     }
     
