@@ -22,7 +22,6 @@ struct TVShowDetailView: View {
     var body: some View {
         
         VStack {
-                        
             AsyncImage(url: URL(string: viewModel.getFormattedPosterUrl(tvShow: tvShow, width: 500)))
             { phase in
                 switch phase {
@@ -92,7 +91,6 @@ struct TVShowDetailView: View {
                     .ignoresSafeArea(.all)
                 Color.black.opacity(0.2)
                     .ignoresSafeArea(.all)
-                
             case .failure:
                 Image(systemName: "wifi.slash")
             @unknown default:

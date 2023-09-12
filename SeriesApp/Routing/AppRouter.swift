@@ -19,12 +19,18 @@ class AppRouter: ObservableObject {
         self.subscribedShowService = subscribedShowService
     }
     
+    @ViewBuilder func start() -> some View {
+        createHomeView().environmentObject(self)
+       
+    }
+    
     @ViewBuilder func route(destination: RouterDestination) -> some View {
         switch destination {
         case .home:
             createHomeView()
         case .details(let tvShow):
             createDetailView(tvShow: tvShow)
+//            createDetailViewRepresentable(tvShow: tvShow)
         case .search:
             createHomeView()
         }
@@ -34,6 +40,10 @@ class AppRouter: ObservableObject {
         let viewModel = TVShowDetailViewModel(tvShowService: tvShowService, subscribedShowService: subscribedShowService)
         
         TVShowDetailView(viewModel: viewModel, tvShow: tvShow)
+    }
+    
+    @ViewBuilder private func createDetailViewRepresentable(tvShow: TVShow) -> some View {
+        TVShowDetailRepresentableView()
     }
     
     @ViewBuilder private func createHomeView() -> some View {

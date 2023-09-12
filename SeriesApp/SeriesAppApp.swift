@@ -11,12 +11,11 @@ import SwiftUI
 struct SeriesAppApp: App {
     var body: some Scene {
         WindowGroup {
-            
-            
-            let tvService = TMDBTVShowService(apiKey: "016f3689a332c33061fd8fb762b6734c")
+            let apiKey = PlistAppConfiguration.getApiKey()
+            let tvService = TMDBTVShowService(apiKey: apiKey)
             let subscriptionsService = DiskSubscribedShowsService()
             let appRouter = AppRouter(tvShowService: tvService, subscribedShowService: subscriptionsService)
-            appRouter.route(destination: .home).environmentObject(appRouter)
+            appRouter.start()
             
         }
     }
