@@ -139,7 +139,7 @@ class HomeViewModel: ObservableObject {
             subscribedTVShows = try await subscribedShowService.fetchSubsribedShows()
             isLoading = false
         } catch _ {
-            
+            isLoading = false
         }
     }
     

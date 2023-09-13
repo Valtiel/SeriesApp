@@ -15,7 +15,7 @@ class TMDBTVShowService: TVShowService {
     private let searchPath: String = "/3/search/tv"
     
     enum Endpoint {
-                
+        
         case popular(page: Int)
         case search(page: Int, query: String)
         
@@ -29,7 +29,7 @@ class TMDBTVShowService: TVShowService {
         }
     }
     
-    private        let headers = [
+    private let headers = [
         "accept": "application/json",
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMTZmMzY4OWEzMzJjMzMwNjFmZDhmYjc2MmI2NzM0YyIsInN1YiI6IjViOGIyY2E4OTI1MTQxNTE4NzAyODJlNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yDxy0y0CNxNencn0aQYJ6v-Aumh5RKp9zHediEBbbWU"
     ]
@@ -65,13 +65,8 @@ class TMDBTVShowService: TVShowService {
         request.httpMethod = "GET"
         
         let (data, _) = try await URLSession.shared.data(for: request)
-        do {
-            let result = try JSONDecoder().decode(TMDBResult.self, from: data)
-            return result.results
-        } catch {
-            print(error)
-            return []
-        }
+        let result = try JSONDecoder().decode(TMDBResult.self, from: data)
+        return result.results
         
     }
     
@@ -90,12 +85,8 @@ class TMDBTVShowService: TVShowService {
         request.httpMethod = "GET"
         
         let (data, _) = try await URLSession.shared.data(for: request)
-        do {
-            let result = try JSONDecoder().decode(TMDBResult.self, from: data)
-            return result.results
-        } catch {
-            return []
-        }
+        let result = try JSONDecoder().decode(TMDBResult.self, from: data)
+        return result.results
         
     }
     

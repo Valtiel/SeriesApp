@@ -42,9 +42,11 @@ struct TVShowDetailView: View {
                 
                 Text(tvShow.name)
                     .foregroundColor(.white)
-                Text("\(tvShow.firstAirDate)")
-                    .foregroundColor(.white)
-                
+                if let year = tvShow.firstAirDate {
+                    Text("\(year)")
+                        .foregroundColor(.white)
+                }
+
                 Button(action: {
                     Task {
                         do {

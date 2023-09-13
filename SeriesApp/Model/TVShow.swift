@@ -9,7 +9,7 @@ import Foundation
 
 struct TVShow: Codable, Hashable {
     let backdropPath: String?
-    let firstAirDate: String
+    let firstAirDate: String?
     let genreIDS: [Int]
     let id: Int
     let name: String

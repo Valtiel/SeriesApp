@@ -46,10 +46,27 @@ struct HomeView: View {
                 if viewModel.isSearching && !query.isEmpty {
                     TVShowSearchListView(viewModel: viewModel, query: $query).frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
+                if viewModel.isLoading {
+                    LoadingView().frame(maxWidth: .infinity, maxHeight: .infinity).background() {
+                        Color.black
+                    }
+                }
             }
         }
     }
     
+}
+
+struct LoadingView: View {
+    
+    var body: some View {
+        VStack {
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+            Text("WAITING FOR API... ")
+                .foregroundColor(.white)
+        }
+    }
 }
 
 struct TVShowSearchListView: View {
