@@ -128,12 +128,12 @@
 		92022E8B2AA628B500FAB2CA /* SeriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				9203B2AC2AB20D240034FA89 /* Modules */,
+				9203B2AB2AB20D020034FA89 /* Network */,
 				9203B2A12AAFB9500034FA89 /* Routing */,
-				927712BE2AA9230E00E609CB /* DetailModule */,
 				92022EC22AA672E800FAB2CA /* Model */,
 				92022EBE2AA671C600FAB2CA /* Service */,
 				92022EB72AA65B9100FAB2CA /* Config */,
-				92022EB62AA65B7D00FAB2CA /* HomeModule */,
 				92022E8C2AA628B500FAB2CA /* SeriesAppApp.swift */,
 				92022E8E2AA628B500FAB2CA /* ContentView.swift */,
 				92022E902AA628B600FAB2CA /* Assets.xcassets */,
@@ -225,6 +225,22 @@
 				9203B2A42AAFBB640034FA89 /* RouterDestination.swift */,
 			);
 			path = Routing;
+			sourceTree = "<group>";
+		};
+		9203B2AB2AB20D020034FA89 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9203B2AC2AB20D240034FA89 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				927712BE2AA9230E00E609CB /* DetailModule */,
+				92022EB62AA65B7D00FAB2CA /* HomeModule */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		927712AD2AA7C01700E609CB /* TVShowService */ = {

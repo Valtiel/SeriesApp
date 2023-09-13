@@ -10,17 +10,33 @@ import Foundation
 class TMDBTVShowService: TVShowService {
     
     private let apiKey: String
-    private let baseUrl: String = "https://api.themoviedb.org"
+    private let baseUrl: String
     private let path: String = "/3/tv/popular"
     private let searchPath: String = "/3/search/tv"
+    
+    enum Endpoint {
+                
+        case popular(page: Int)
+        case search(page: Int, query: String)
+        
+        var path: URL? {
+            switch self {
+            case .popular(page: let page):
+                return URL(string: "/3/tv/popular")
+            case .search(page: let page, query: let query):
+                return URL(string: "/3/search/tv")
+            }
+        }
+    }
     
     private        let headers = [
         "accept": "application/json",
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMTZmMzY4OWEzMzJjMzMwNjFmZDhmYjc2MmI2NzM0YyIsInN1YiI6IjViOGIyY2E4OTI1MTQxNTE4NzAyODJlNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.yDxy0y0CNxNencn0aQYJ6v-Aumh5RKp9zHediEBbbWU"
     ]
     
-    init(apiKey: String) {
+    init(apiKey: String, baseUrl: String) {
         self.apiKey = apiKey
+        self.baseUrl = baseUrl
     }
     
     func getImageURL(_ path: String?, width: Int) -> String {
@@ -125,7 +141,6 @@ private class ServiceBuilder {
     func build() -> URL {
         var components = URLComponents(string: baseUrl)!
         components.path = path
-        
         components.queryItems = queryItems
         return components.url!
     }

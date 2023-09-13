@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Server URL</key>
-	<string>url</string>
+	<string>https://api.themoviedb.org</string>
 	<key>API Key</key>
 	<string>016f3689a332c33061fd8fb762b6734c</string>
 </dict>
