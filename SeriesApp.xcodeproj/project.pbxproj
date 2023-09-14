@@ -23,6 +23,7 @@
 		9203B2A52AAFBB640034FA89 /* RouterDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B2A42AAFBB640034FA89 /* RouterDestination.swift */; };
 		9203B2A82AB0EEB40034FA89 /* UIKitTVShowDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B2A72AB0EEB40034FA89 /* UIKitTVShowDetailView.swift */; };
 		9203B2AA2AB0F0760034FA89 /* TVShowDetailRepresentableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B2A92AB0F0760034FA89 /* TVShowDetailRepresentableVIew.swift */; };
+		9203B2B22AB272440034FA89 /* URLSessionRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B2B12AB272440034FA89 /* URLSessionRequestBuilder.swift */; };
 		927712AF2AA7C02600E609CB /* TVShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712AE2AA7C02600E609CB /* TVShowService.swift */; };
 		927712B32AA7C20400E609CB /* MockTVShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712B22AA7C20400E609CB /* MockTVShowService.swift */; };
 		927712B82AA7D9AE00E609CB /* TMDBTVShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927712B72AA7D9AE00E609CB /* TMDBTVShowService.swift */; };
@@ -70,6 +71,7 @@
 		9203B2A42AAFBB640034FA89 /* RouterDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterDestination.swift; sourceTree = "<group>"; };
 		9203B2A72AB0EEB40034FA89 /* UIKitTVShowDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitTVShowDetailView.swift; sourceTree = "<group>"; };
 		9203B2A92AB0F0760034FA89 /* TVShowDetailRepresentableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailRepresentableVIew.swift; sourceTree = "<group>"; };
+		9203B2B12AB272440034FA89 /* URLSessionRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRequestBuilder.swift; sourceTree = "<group>"; };
 		927712AE2AA7C02600E609CB /* TVShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowService.swift; sourceTree = "<group>"; };
 		927712B22AA7C20400E609CB /* MockTVShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTVShowService.swift; sourceTree = "<group>"; };
 		927712B72AA7D9AE00E609CB /* TMDBTVShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBTVShowService.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 		9203B2AB2AB20D020034FA89 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9203B2B12AB272440034FA89 /* URLSessionRequestBuilder.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				927712B32AA7C20400E609CB /* MockTVShowService.swift in Sources */,
 				9203B2AA2AB0F0760034FA89 /* TVShowDetailRepresentableVIew.swift in Sources */,
 				92022EB92AA65C6200FAB2CA /* PListAppConfiguration.swift in Sources */,
+				9203B2B22AB272440034FA89 /* URLSessionRequestBuilder.swift in Sources */,
 				927712BB2AA7E6E700E609CB /* SubscribedShowsService.swift in Sources */,
 				92022E8F2AA628B500FAB2CA /* ContentView.swift in Sources */,
 				9203B2A82AB0EEB40034FA89 /* UIKitTVShowDetailView.swift in Sources */,
